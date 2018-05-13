@@ -18,7 +18,7 @@ public final class TestPlugin extends JavaPlugin{
     public void onEnable() {
 		getLogger().info("onEnable has been invoked!");
 		// This will throw a NullPointerException if you don't have the command defined in your plugin.yml file!
-		this.getCommand("basic").setExecutor(new TestPluginCommandExecutor(this));
+		this.getCommand("basic").setExecutor(new TestPluginCommandExecutor());
     }
     
     @Override
