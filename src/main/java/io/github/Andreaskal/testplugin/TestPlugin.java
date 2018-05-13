@@ -43,18 +43,6 @@ public final class TestPlugin extends JavaPlugin{
     	return false;
     }
     
-    @EventHandler
-    public void onPlayerMove(PlayerMoveEvent event) {
-        // Get the player's location.
-        Location loc = event.getPlayer().getLocation();
-        // Sets loc to five above where it used to be. Note that this doesn't change the player's position.
-        loc.setY(loc.getY() + 5);
-        // Gets the block at the new location.
-        Block b = loc.getBlock();
-        // Sets the block to type id 1 (stone).
-        b.setType(Material.STONE);
-    }
-    
     public void generateCube(Location loc, int length) {
         // Set one corner of the cube to the given location.
         // Uses getBlockN() instead of getN() to avoid casting to an int later.
